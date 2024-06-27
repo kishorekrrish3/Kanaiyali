@@ -1,0 +1,51 @@
+.navbar {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 229, 229, 0.6) 0%,
+    rgba(255, 201, 201, 0.6) 100%
+  );
+
+  box-shadow: 0px 8px 56px 0px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(100px);
+  height: 64px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  z-index: 4;
+}
+
+.navbar-logo {
+  width: 52px;
+  height: 52px;
+}
+
+.navbar-links-container {
+  width: 1000px;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-link {
+  font-size: 14px;
+  transition: 0.2s ease-in-out;
+}
+
+.navbar-btn {
+  border-radius: 6px;
+  background: #f2bb2c;
+  padding: 12px 20px;
+  border: none;
+  font-weight: 800;
+  font-family: "Montserrat";
+}
+
+.navbar-link:hover {
+  margin-bottom: 0.65rem;
+}

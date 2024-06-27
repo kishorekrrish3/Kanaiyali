@@ -1,0 +1,134 @@
+.content-1-title {
+  color: #f2bb2c;
+  font-size: 46px;
+  padding-left: 4rem;
+}
+
+.content-1 {
+  padding: 4rem;
+  padding-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 360px;
+  box-shadow: 0px 16px 56px 0px rgba(0, 0, 0, 0.05);
+}
+
+.content-1-text {
+  text-align: right;
+  width: 900px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%; /* 48px */
+  letter-spacing: 2px;
+  padding-right: 4rem;
+}
+
+.content-1-text-container {
+  padding-top: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.content-2-title {
+  color: #f2bb2c;
+  font-size: 38px;
+  padding-right: 4rem;
+}
+
+.content-2 {
+  padding: 4rem;
+  padding-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 0px 16px 56px 0px rgba(0, 0, 0, 0.05);
+}
+
+.content-2-text {
+  text-align: left;
+  width: 900px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%; /* 48px */
+  letter-spacing: 2px;
+  padding-left: 4rem;
+}
+
+.content-2-text-container {
+  padding-top: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.content-3-title {
+  color: #f2bb2c;
+  font-size: 46px;
+}
+
+.content-3 {
+  padding: 4rem;
+  padding-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 16px 56px 0px rgba(0, 0, 0, 0.05);
+}
+
+.content-3-text {
+  text-align: justify;
+  width: 1260px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%; /* 48px */
+  letter-spacing: 2px;
+}
+
+.content-3-text-container {
+  padding-top: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-4-title {
+  color: #f2bb2c;
+  font-size: 46px;
+  text-align: center;
+}
+
+.content-4 {
+  margin: 6rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  box-shadow: 14.4px 14.4px 50.4px 0px rgba(0, 0, 0, 0.05),
+    -14.4px -14.4px 50.4px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 21.6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-4-img {
+  width: 640px;
+}
+
+.content-4-partition {
+  display: flex;
+  gap: 4rem;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 4rem;
+}
+
+.content-4-text {
+  text-align: left;
+  font-size: 18px;
+  line-height: 170%;
+}
