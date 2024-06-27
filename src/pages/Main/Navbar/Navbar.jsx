@@ -1,32 +1,33 @@
 import React from "react";
 import "./Navbar.css";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
     <div className="navbar">
       <img src="assets/logo.svg" alt="logo" className="navbar-logo" />
       <div className="navbar-links-container">
-        <a href="#" className="navbar-link">
+        <Link href="/kavithai" className="navbar-link">
           கவிதை
-        </a>
-        <a href="#" className="navbar-link">
+        </Link>
+        <Link href="/oviyam" className="navbar-link">
           ஓவியம்
-        </a>
-        <a href="#" className="navbar-link">
+        </Link>
+        <Link href="/sirukadhai" className="navbar-link">
           சிறுகதை
-        </a>
-        <a href="#" className="navbar-link">
+        </Link>
+        <Link href="/puthaga-vimarsanam" className="navbar-link">
           புத்தக விமர்சனம்
-        </a>
-        <a href="#" className="navbar-link">
+        </Link>
+        <Link href="/vasanam" className="navbar-link">
           வசனம்
-        </a>
-        <a href="#" className="navbar-link">
+        </Link>
+        <Link href="/vidukadhai" className="navbar-link">
           விடுகதை
-        </a>
-        <a href="#" className="navbar-link">
+        </Link>
+        <Link href="/naatkurippu" className="navbar-link">
           நாட்குறிப்பு
-        </a>
+        </Link>
       </div>
       <div className="navbar-btn-container">
         <button className="navbar-btn">பதிவேற்றவும்</button>
