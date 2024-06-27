@@ -7,25 +7,28 @@ const Navbar = () => {
     <div className="navbar">
       <img src="assets/logo.svg" alt="logo" className="navbar-logo" />
       <div className="navbar-links-container">
-        <Link href="/kavithai" className="navbar-link">
+        <Link href="/kavithai" className="navbar-link kavithai-nav">
           கவிதை
         </Link>
-        <Link href="/oviyam" className="navbar-link">
+        <Link href="/oviyam" className="navbar-link oviyam-nav">
           ஓவியம்
         </Link>
-        <Link href="/sirukadhai" className="navbar-link">
+        <Link href="/sirukadhai" className="navbar-link sirukadhai-nav">
           சிறுகதை
         </Link>
-        <Link href="/puthaga-vimarsanam" className="navbar-link">
+        <Link
+          href="/puthaga-vimarsanam"
+          className="navbar-link puthaga-vimarsanam-nav"
+        >
           புத்தக விமர்சனம்
         </Link>
-        <Link href="/vasanam" className="navbar-link">
+        <Link href="/vasanam" className="navbar-link vasanam-nav">
           வசனம்
         </Link>
-        <Link href="/vidukadhai" className="navbar-link">
+        <Link href="/vidukadhai" className="navbar-link vidukadhai-nav">
           விடுகதை
         </Link>
-        <Link href="/naatkurippu" className="navbar-link">
+        <Link href="/naatkurippu" className="navbar-link naatkurippu-nav">
           நாட்குறிப்பு
         </Link>
       </div>
