@@ -20,6 +20,7 @@ const kavithai = () => {
 
       <div className="kavithai-content">
         <Card1 />
+        <Card1 />
       </div>
 
       <Footer className="footer-element" />

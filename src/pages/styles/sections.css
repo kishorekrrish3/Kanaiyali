@@ -64,6 +64,7 @@ p {
   align-items: center;
   padding-left: 2rem;
   padding-right: 2rem;
+  gap: 1.5rem;
 }
 
 /* ------------------------------------------------------------ */
@@ -92,6 +93,16 @@ p {
   transform: translate(-50%, -50%);
 }
 
+.oviyam-content {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  gap: 1.5rem;
+}
+
 /* ------------------------------------------------------------ */
 
 /* SIRUKADHAI */
@@ -116,6 +127,16 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.sirukadhai-content {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  gap: 1.5rem;
 }
 
 /* ------------------------------------------------------------ */
@@ -144,6 +165,16 @@ p {
   transform: translate(-50%, -50%);
 }
 
+.puthaga-vimarsanam-content {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  gap: 1.5rem;
+}
+
 /* ------------------------------------------------------------ */
 
 /* VASANAM */
@@ -168,6 +199,16 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.vasanam-content {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  gap: 1.5rem;
 }
 
 /* ------------------------------------------------------------ */
@@ -196,6 +237,16 @@ p {
   transform: translate(-50%, -50%);
 }
 
+.vidukadhai-content {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  gap: 1.5rem;
+}
+
 /* ------------------------------------------------------------ */
 
 /* NAATKURIPPU */
@@ -220,4 +271,14 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.naatkurippu-content {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  gap: 1.5rem;
 }
