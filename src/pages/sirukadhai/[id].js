@@ -10,6 +10,26 @@ const SirukadhaiContent = () => {
   const { id } = router.query; // Use useRouter hook to access query parameters
 
   const [sirukadhai, setSirukadhai] = useState(null);
+  const [people, setPeople] = useState([]);
+
+  useEffect(() => {
+    async function fetchPeople() {
+      try {
+        const res = await fetch("/api/people");
+        if (!res.ok) {
+          throw new Error("Failed to fetch people");
+        }
+        const data = await res.json();
+        setPeople(data.people);
+      } catch (error) {
+        console.error("Error fetching people:", error);
+      }
+    }
+
+    if (id) {
+      fetchPeople();
+    }
+  }, [id]);
 
   useEffect(() => {
     async function fetchSirukadhai() {
@@ -36,16 +56,36 @@ const SirukadhaiContent = () => {
     return <div>Loading...</div>;
   }
 
+  const person = people.find((p) => p.name === sirukadhai.name);
+
   return (
     <div className="sirukadhai-page">
       <Navbar />
-      <div className="sirukadhai-details">
-        <div className="sirukadhai-info">
-          <h1>{sirukadhai.title}</h1>
-          <p>{sirukadhai.subtitle}</p>
-          <p>{sirukadhai.content}</p>
-          <p>{sirukadhai.name}</p>
-          <p>{sirukadhai.date}</p>
+      <div className="sirukadhai-page-details">
+        <div className="sirukadhai-page-info">
+          <h1 className="sirukadhai-page-title">{sirukadhai.title}</h1>
+          <p className="sirukadhai-page-subtitle">{sirukadhai.subtitle}</p>
+          <div className="sirukadhai-page-name-date">
+            <div className="sirukadhai-page-name-container">
+              {person && person.nameImgSrc && (
+                <img
+                  src={person.nameImgSrc}
+                  alt="person"
+                  className="sirukadhai-page-person-img"
+                />
+              )}
+              <p className="sirukadhai-page-name">{sirukadhai.name}</p>
+            </div>
+            <div className="sirukadhai-page-date-container">
+              <img
+                src="/assets/calendar.svg"
+                alt="calendar"
+                className="sirukadhai-page-calendar-icon"
+              />
+              <p className="sirukadhai-page-date">{sirukadhai.date}</p>
+            </div>
+          </div>
+          <p className="sirukadhai-page-content">{sirukadhai.content}</p>
         </div>
       </div>
       <Footer />

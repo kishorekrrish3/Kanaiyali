@@ -5,7 +5,7 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <img src="assets/logo.svg" alt="logo" className="navbar-logo" />
+      <img src="/assets/logo.svg" alt="logo" className="navbar-logo" />
       <div className="navbar-links-container">
         <Link href="/kavithai" className="navbar-link kavithai-nav">
           கவிதை

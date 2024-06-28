@@ -9,6 +9,7 @@ import Card2 from "./Cards/Card-2";
 
 const PuthagaVimarsanam = () => {
   const [books, setBooks] = useState([]);
+  const [people, setPeople] = useState([]);
 
   useEffect(() => {
     async function fetchBooks() {
@@ -24,8 +25,14 @@ const PuthagaVimarsanam = () => {
         // Handle error state or notification here
       }
     }
+    async function fetchPeople() {
+      const res = await fetch("/api/people");
+      const data = await res.json();
+      setPeople(data.people);
+    }
 
     fetchBooks();
+    fetchPeople();
   }, []);
 
   return (
@@ -40,16 +47,20 @@ const PuthagaVimarsanam = () => {
         <div className="puthaga-vimarsanam-title">புத்தக விமர்சனம்</div>
       </div>
       <div className="puthaga-vimarsanam-content">
-        {books.map((book) => (
-          <Link key={book.id} href={`/puthaga-vimarsanam/${book.id}`}>
-            <Card2
-              title={book.title}
-              subtitle={book.subtitle}
-              name={book.name}
-              date={book.date}
-            />
-          </Link>
-        ))}
+        {books.map((book) => {
+          const person = people.find((p) => p.name === book.name);
+          return (
+            <Link key={book.id} href={`/puthaga-vimarsanam/${book.id}`}>
+              <Card2
+                title={book.title}
+                subtitle={book.subtitle}
+                name={book.name}
+                date={book.date}
+                nameImgSrc={person ? person.nameImgSrc : null}
+              />
+            </Link>
+          );
+        })}
       </div>
       <Footer className="footer-element" />
     </div>

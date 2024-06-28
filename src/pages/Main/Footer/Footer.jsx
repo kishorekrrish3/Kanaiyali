@@ -28,13 +28,21 @@ const Footer = () => {
         </a>
       </div>
       <div className="footer-icons">
-        <img src="assets/facebook.svg" alt="facebook" className="footer-icon" />
         <img
-          src="assets/instagram.svg"
+          src="/assets/facebook.svg"
+          alt="facebook"
+          className="footer-icon"
+        />
+        <img
+          src="/assets/instagram.svg"
           alt="instagram"
           className="footer-icon"
         />
-        <img src="assets/whatsapp.svg" alt="whatsapp" className="footer-icon" />
+        <img
+          src="/assets/whatsapp.svg"
+          alt="whatsapp"
+          className="footer-icon"
+        />
       </div>
       <p className="copyright">© 2024 Tamil Mandram. All rights reserved.</p>
     </div>

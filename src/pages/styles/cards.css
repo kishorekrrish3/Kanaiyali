@@ -80,7 +80,7 @@
 .card-2 {
   background-color: #fff1f1;
   border-radius: 16px;
-  max-width: 640px;
+  width: 640px;
   width: 100%;
   border: 1px solid #acacac;
   box-shadow: 8px 8px 56px 0px rgba(0, 0, 0, 0.05);
@@ -147,6 +147,7 @@
   flex-direction: column;
   row-gap: 1rem;
   align-items: flex-start;
+  width: 420px;
 }
 
 .card-2-date {

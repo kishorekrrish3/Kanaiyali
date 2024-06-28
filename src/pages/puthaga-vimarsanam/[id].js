@@ -7,14 +7,15 @@ import "../master.css";
 
 const PuthagaVimarsanamContent = () => {
   const router = useRouter();
-  const { id } = router.query; // Use useRouter hook to access query parameters
+  const { id } = router.query;
 
   const [book, setBook] = useState(null);
+  const [people, setPeople] = useState([]);
 
   useEffect(() => {
     async function fetchBook() {
       try {
-        const res = await fetch(`/api/books/${id}`); // Use API endpoint with book ID
+        const res = await fetch(`/api/books/${id}`);
         if (!res.ok) {
           throw new Error("Failed to fetch book");
         }
@@ -22,19 +23,33 @@ const PuthagaVimarsanamContent = () => {
         setBook(data);
       } catch (error) {
         console.error("Error fetching book:", error);
-        // Handle error state or notification here
       }
     }
 
-    // Fetch book data based on the ID from URL
+    async function fetchPeople() {
+      try {
+        const res = await fetch("/api/people");
+        if (!res.ok) {
+          throw new Error("Failed to fetch people");
+        }
+        const data = await res.json();
+        setPeople(data.people);
+      } catch (error) {
+        console.error("Error fetching people:", error);
+      }
+    }
+
     if (id) {
       fetchBook();
+      fetchPeople();
     }
-  }, [id]); // Include id in the dependency array to fetch on route change
+  }, [id]);
 
   if (!book) {
     return <div className="loading">Loading...</div>;
   }
+
+  const person = people.find((p) => p.name === book.name);
 
   return (
     <div className="puthaga-vimarsanam-page">
@@ -49,10 +64,30 @@ const PuthagaVimarsanamContent = () => {
         </div>
         <div className="book-page-info-container">
           <div className="book-page-info">
-            <h1 className="book-page-title">{book.title}</h1>
-            <p className="book-page-subtitle">{book.subtitle}</p>
-            <p className="book-page-name">{book.name}</p>
-            <p className="book-page-date">{book.date}</p>
+            <div className="book-page-header">
+              <h1 className="book-page-title">{book.title}</h1>
+              <p className="book-page-subtitle">{book.subtitle}</p>
+              <div className="book-page-name-date">
+                <div className="book-page-name-container">
+                  {person && person.nameImgSrc && (
+                    <img
+                      src={person.nameImgSrc}
+                      alt="person"
+                      className="book-page-person-img"
+                    />
+                  )}
+                  <p className="book-page-name">{book.name}</p>
+                </div>
+                <div className="book-page-date-container">
+                  <img
+                    src="/assets/calendar.svg"
+                    alt="calendar"
+                    className="book-page-calendar-icon"
+                  />
+                  <p className="book-page-date">{book.date}</p>
+                </div>
+              </div>
+            </div>
             <p className="book-page-content">{book.content}</p>
           </div>
         </div>

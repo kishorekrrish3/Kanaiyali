@@ -10,6 +10,26 @@ const KavithaiContent = () => {
   const { id } = router.query; // Use useRouter hook to access query parameters
 
   const [kavithai, setKavithai] = useState(null);
+  const [people, setPeople] = useState([]);
+
+  useEffect(() => {
+    async function fetchPeople() {
+      try {
+        const res = await fetch("/api/people");
+        if (!res.ok) {
+          throw new Error("Failed to fetch people");
+        }
+        const data = await res.json();
+        setPeople(data.people);
+      } catch (error) {
+        console.error("Error fetching people:", error);
+      }
+    }
+
+    if (id) {
+      fetchPeople();
+    }
+  }, [id]);
 
   useEffect(() => {
     async function fetchKavithai() {
@@ -36,16 +56,36 @@ const KavithaiContent = () => {
     return <div>Loading...</div>;
   }
 
+  const person = people.find((p) => p.name === kavithai.name);
+
   return (
     <div className="kavithai-page">
       <Navbar />
-      <div className="kavithai-details">
-        <div className="kavithai-info">
-          <h1>{kavithai.title}</h1>
-          <p>{kavithai.subtitle}</p>
-          <p>{kavithai.content}</p>
-          <p>{kavithai.name}</p>
-          <p>{kavithai.date}</p>
+      <div className="kavithai-page-details">
+        <div className="kavithai-page-info">
+          <h1 className="kavithai-page-title">{kavithai.title}</h1>
+          <p className="kavithai-page-subtitle">{kavithai.subtitle}</p>
+          <div className="kavithai-page-name-date">
+            <div className="kavithai-page-name-container">
+              {person && person.nameImgSrc && (
+                <img
+                  src={person.nameImgSrc}
+                  alt="person"
+                  className="kavithai-page-person-img"
+                />
+              )}
+              <p className="kavithai-page-name">{kavithai.name}</p>
+            </div>
+            <div className="kavithai-page-date-container">
+              <img
+                src="/assets/calendar.svg"
+                alt="calendar"
+                className="kavithai-page-calendar-icon"
+              />
+              <p className="kavithai-page-date">{kavithai.date}</p>
+            </div>
+          </div>
+          <p className="kavithai-page-content">{kavithai.content}</p>
         </div>
       </div>
       <Footer />

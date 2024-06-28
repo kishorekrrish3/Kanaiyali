@@ -2,7 +2,7 @@
 import React from "react";
 import "../styles/cards.css";
 
-const Card2 = ({ title, subtitle, name, date }) => {
+const Card2 = ({ title, subtitle, name, date, nameImgSrc }) => {
   return (
     <div className="card-2">
       <div className="card-2-outer-1">
@@ -15,7 +15,9 @@ const Card2 = ({ title, subtitle, name, date }) => {
       <div className="card-2-outer-2">
         <div className="card-2-container-0">
           <div className="card-2-container-1">
-            <img src="assets/pic-1.jpg" alt="person" className="card-2-img" />
+            {nameImgSrc && (
+              <img src={nameImgSrc} alt="person" className="card-2-img" />
+            )}
             <p className="card-2-name">{name}</p>
           </div>
           <div className="card-2-container-2">
