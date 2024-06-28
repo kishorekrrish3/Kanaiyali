@@ -61,6 +61,7 @@
   flex-direction: column;
   row-gap: 1rem;
   align-items: center;
+  width: 640px;
 }
 
 .card-1-date {
@@ -85,7 +86,7 @@
   box-shadow: 8px 8px 56px 0px rgba(0, 0, 0, 0.05);
   display: flex;
   /* flex-direction: column; */
-  padding: 2rem 4rem 2rem 2rem;
+  padding: 2rem;
   gap: 3rem;
 }
 

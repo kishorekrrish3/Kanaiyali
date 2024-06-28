@@ -1,11 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./styles/sections.css";
 import "./Main/Navbar/Navbar.css";
 import Navbar from "./Main/Navbar/Navbar";
 import Footer from "./Main/Footer/Footer";
 import Card1 from "./Cards/Card-1";
+import Link from "next/link";
 
-const vasanam = () => {
+const Vasanam = () => {
+  const [vasanam, setVasanam] = useState([]);
+
+  useEffect(() => {
+    async function fetchVasanam() {
+      try {
+        const res = await fetch("/api/vasanam");
+        if (!res.ok) {
+          throw new Error("Failed to fetch vasanam");
+        }
+        const data = await res.json();
+        setVasanam(data.vasanam);
+      } catch (error) {
+        console.error("Error fetching kavthai:", error);
+        // Handle error state or notification here
+      }
+    }
+
+    fetchVasanam();
+  }, []);
+
   return (
     <div className="vasanam">
       <div className="vasanam-elements">
@@ -17,13 +38,23 @@ const vasanam = () => {
         />
         <div className="vasanam-title">வசனம்</div>
       </div>
-      <div className="naatkurippu-content">
-        <Card1 />
-        <Card1 />
+      <div className="vasanam-content">
+        {vasanam.map((vasanam) => (
+          <Link key={vasanam.id} href={`/vasanam/${vasanam.id}`}>
+            <Card1
+              key={vasanam.id}
+              title={vasanam.title}
+              subtitle={vasanam.subtitle}
+              name={vasanam.name}
+              date={vasanam.date}
+              nameImgSrc={vasanam.nameImgSrc}
+            />
+          </Link>
+        ))}
       </div>
       <Footer className="footer-element" />
     </div>
   );
 };
 
-export default vasanam;
+export default Vasanam;
