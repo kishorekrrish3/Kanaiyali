@@ -8,6 +8,7 @@ import Link from "next/link";
 
 const vidukadhai = () => {
   const [vidukadhai, setVidukadhai] = useState([]);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   useEffect(() => {
     async function fetchVidukadhai() {
@@ -18,6 +19,7 @@ const vidukadhai = () => {
         }
         const data = await res.json();
         setVidukadhai(data.vidukadhai);
+        setLoading(false); // Set loading to false once data is fetched
       } catch (error) {
         console.error("Error fetching vidukadhai:", error);
         // Handle error state or notification here
@@ -26,6 +28,10 @@ const vidukadhai = () => {
 
     fetchVidukadhai();
   }, []);
+
+  if (loading) {
+    return <div className="loading-element">Loading...</div>; // Render loading text while data is being fetched
+  }
 
   return (
     <div className="vidukadhai">

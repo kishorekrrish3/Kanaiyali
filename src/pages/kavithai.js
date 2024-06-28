@@ -6,8 +6,9 @@ import Footer from "./Main/Footer/Footer";
 import Card1 from "./Cards/Card-1";
 import Link from "next/link";
 
-const kavithai = () => {
+const Kavithai = () => {
   const [kavithai, setKavithai] = useState([]);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   useEffect(() => {
     async function fetchKavithai() {
@@ -18,14 +19,20 @@ const kavithai = () => {
         }
         const data = await res.json();
         setKavithai(data.kavithai);
+        setLoading(false); // Set loading to false once data is fetched
       } catch (error) {
-        console.error("Error fetching kavthai:", error);
+        console.error("Error fetching kavithai:", error);
         // Handle error state or notification here
+        setLoading(false); // Set loading to false in case of error
       }
     }
 
     fetchKavithai();
   }, []);
+
+  if (loading) {
+    return <div className="loading-element">Loading...</div>; // Render loading text while data is being fetched
+  }
 
   return (
     <div className="kavithai">
@@ -57,4 +64,4 @@ const kavithai = () => {
   );
 };
 
-export default kavithai;
+export default Kavithai;

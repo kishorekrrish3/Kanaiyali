@@ -8,6 +8,7 @@ import Link from "next/link";
 
 const Vasanam = () => {
   const [vasanam, setVasanam] = useState([]);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   useEffect(() => {
     async function fetchVasanam() {
@@ -18,6 +19,7 @@ const Vasanam = () => {
         }
         const data = await res.json();
         setVasanam(data.vasanam);
+        setLoading(false); // Set loading to false in case of error
       } catch (error) {
         console.error("Error fetching kavthai:", error);
         // Handle error state or notification here
@@ -26,6 +28,10 @@ const Vasanam = () => {
 
     fetchVasanam();
   }, []);
+
+  if (loading) {
+    return <div className="loading-element">Loading...</div>; // Render loading text while data is being fetched
+  }
 
   return (
     <div className="vasanam">

@@ -8,23 +8,30 @@ import Card3 from "./Cards/Card-3";
 const Oviyam = () => {
   const [drawings, setDrawings] = useState([]);
   const [people, setPeople] = useState([]);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   useEffect(() => {
     async function fetchDrawings() {
       const res = await fetch("/api/drawing");
       const data = await res.json();
       setDrawings(data.drawings);
+      setLoading(false);
     }
 
     async function fetchPeople() {
       const res = await fetch("/api/people");
       const data = await res.json();
       setPeople(data.people);
+      setLoading(false);
     }
 
     fetchDrawings();
     fetchPeople();
   }, []);
+
+  if (loading) {
+    return <div className="loading-element">Loading...</div>; // Render loading text while data is being fetched
+  }
 
   return (
     <div className="oviyam">

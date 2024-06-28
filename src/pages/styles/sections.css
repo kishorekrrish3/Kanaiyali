@@ -8,10 +8,21 @@ a {
   text-decoration: none;
   color: black;
 }
+
 h1,
 p {
   margin: 0;
 }
+
+.loading-element {
+  height: 100%;
+  width: 100%;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 3rem;
+  font-weight: 600;
+}
+
 .kavithai,
 .oviyam,
 .naatkurippu,

@@ -8,6 +8,7 @@ import Link from "next/link";
 
 const sirukadhai = () => {
   const [sirukadhai, setSirukadhai] = useState([]);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   useEffect(() => {
     async function fetchSirukadhai() {
@@ -18,6 +19,7 @@ const sirukadhai = () => {
         }
         const data = await res.json();
         setSirukadhai(data.sirukadhai);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching kavthai:", error);
         // Handle error state or notification here
@@ -26,6 +28,10 @@ const sirukadhai = () => {
 
     fetchSirukadhai();
   }, []);
+
+  if (loading) {
+    return <div className="loading-element">Loading...</div>; // Render loading text while data is being fetched
+  }
 
   return (
     <div className="sirukadhai">

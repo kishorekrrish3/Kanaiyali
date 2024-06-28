@@ -10,6 +10,7 @@ import Card2 from "./Cards/Card-2";
 const PuthagaVimarsanam = () => {
   const [books, setBooks] = useState([]);
   const [people, setPeople] = useState([]);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   useEffect(() => {
     async function fetchBooks() {
@@ -20,6 +21,7 @@ const PuthagaVimarsanam = () => {
         }
         const data = await res.json();
         setBooks(data);
+        setLoading(false); // Set loading to false once data is fetched
       } catch (error) {
         console.error("Error fetching books:", error);
         // Handle error state or notification here
@@ -29,11 +31,16 @@ const PuthagaVimarsanam = () => {
       const res = await fetch("/api/people");
       const data = await res.json();
       setPeople(data.people);
+      setLoading(false); // Set loading to false once data is fetched
     }
 
     fetchBooks();
     fetchPeople();
   }, []);
+
+  if (loading) {
+    return <div className="loading-element">Loading...</div>; // Render loading text while data is being fetched
+  }
 
   return (
     <div className="puthaga-vimarsanam">

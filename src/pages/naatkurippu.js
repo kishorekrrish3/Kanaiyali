@@ -8,6 +8,7 @@ import Link from "next/link";
 
 const naatkurippu = () => {
   const [naatkurippu, setNaatkurippu] = useState([]);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   useEffect(() => {
     async function fetchNaatkurippu() {
@@ -18,6 +19,7 @@ const naatkurippu = () => {
         }
         const data = await res.json();
         setNaatkurippu(data.naatkurippu);
+        setLoading(false); // Set loading to false once data is fetched
       } catch (error) {
         console.error("Error fetching naatkurippu:", error);
         // Handle error state or notification here
@@ -26,6 +28,10 @@ const naatkurippu = () => {
 
     fetchNaatkurippu();
   }, []);
+
+  if (loading) {
+    return <div className="loading-element">Loading...</div>; // Render loading text while data is being fetched
+  }
 
   return (
     <div className="naatkurippu">
