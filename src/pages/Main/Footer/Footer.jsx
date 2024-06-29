@@ -1,31 +1,32 @@
 import React from "react";
 import "./Footer.css";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-links-container">
-        <a href="#" className="footer-link">
+        <Link href="/kavithai" className="footer-link ">
           கவிதை
-        </a>
-        <a href="#" className="footer-link">
+        </Link>
+        <Link href="/oviyam" className="footer-link ">
           ஓவியம்
-        </a>
-        <a href="#" className="footer-link">
+        </Link>
+        <Link href="/sirukadhai" className="footer-link ">
           சிறுகதை
-        </a>
-        <a href="#" className="footer-link">
+        </Link>
+        <Link href="/puthaga-vimarsanam" className="footer-link ">
           புத்தக விமர்சனம்
-        </a>
-        <a href="#" className="footer-link">
+        </Link>
+        <Link href="/vasanam" className="footer-link ">
           வசனம்
-        </a>
-        <a href="#" className="footer-link">
+        </Link>
+        <Link href="/vidukadhai" className="footer-link ">
           விடுகதை
-        </a>
-        <a href="#" className="footer-link">
+        </Link>
+        <Link href="/naatkurippu" className="footer-link ">
           நாட்குறிப்பு
-        </a>
+        </Link>
       </div>
       <div className="footer-icons">
         <img

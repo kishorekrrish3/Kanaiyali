@@ -30,6 +30,7 @@ p {
 .vasanam,
 .sirukadhai,
 .vidukadhai {
+  position: relative;
   font-family: "Montserrat";
   font-weight: 800;
   width: 100%;
@@ -44,28 +45,34 @@ p {
   position: sticky;
 }
 
-/* KAVITHAI */
-
-.kavithai-bg {
-  width: 100%;
-  height: 880px;
-  object-fit: cover;
-  margin-top: -6rem;
+.kavithai-elements,
+.oviyam-elements,
+.sirukadhai-elements,
+.puthaga-vimarsanam-elements,
+.vasanam-elements,
+.vidukadhai-elements,
+.naatkurippu-elements {
+  position: relative; /* Ensure the parent container is relatively positioned */
 }
+
+/* KAVITHAI */
 
 .kavithai-title {
   font-size: 72px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  z-index: 1;
   color: #fff0f0;
-  width: 600px;
+  width: 100%; /* Adjust width to span the full width of its container */
   text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+}
+
+/* Ensure the background image covers the area properly */
+.kavithai-bg {
+  width: 100%;
+  height: 880px;
+  object-fit: cover;
+  margin-top: -6rem;
 }
 
 .kavithai-content {
@@ -82,26 +89,21 @@ p {
 
 /* OVIYAM */
 
-.oviyam-bg {
-  width: 100%;
-  height: 880px;
-  object-fit: cover;
-  margin-top: -6rem;
-}
-
 .oviyam-title {
   font-size: 72px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  z-index: 1;
   color: #fff0f0;
-  width: 600px;
+  width: 100%; /* Adjust width to span the full width of its container */
   text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+}
+
+.oviyam-bg {
+  width: 100%;
+  height: 880px;
+  object-fit: cover;
+  margin-top: -6rem;
 }
 
 .oviyam-content {
@@ -130,14 +132,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  z-index: 1;
   color: #fff0f0;
-  width: 600px;
+  width: 100%; /* Adjust width to span the full width of its container */
   text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .sirukadhai-content {
@@ -166,14 +163,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  z-index: 1;
   color: #fff0f0;
-  width: 600px;
+  width: 100%; /* Adjust width to span the full width of its container */
   text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .puthaga-vimarsanam-content {
@@ -181,8 +173,7 @@ p {
   max-width: 100%;
   flex-direction: column;
   align-items: center;
-  padding-left: 0rem;
-  padding-right: 2rem;
+  justify-content: center;
   gap: 1.5rem;
 }
 
@@ -202,14 +193,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  z-index: 1;
   color: #fff0f0;
-  width: 600px;
+  width: 100%; /* Adjust width to span the full width of its container */
   text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .vasanam-content {
@@ -238,14 +224,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  z-index: 1;
   color: #fff0f0;
-  width: 600px;
+  width: 100%; /* Adjust width to span the full width of its container */
   text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .vidukadhai-content {
@@ -274,14 +255,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  z-index: 1;
   color: #fff0f0;
-  width: 600px;
+  width: 100%; /* Adjust width to span the full width of its container */
   text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .naatkurippu-content {
@@ -292,4 +268,85 @@ p {
   padding-left: 2rem;
   padding-right: 2rem;
   gap: 1.5rem;
+}
+
+/* RESPONSIVENESS */
+
+.kavithai-nav,
+.oviyam-nav,
+.sirukadhai-nav,
+.puthaga-vimarsanam-nav,
+.vasanam-nav,
+.vidukadhai-nav,
+.naatkurippu-nav {
+  display: none;
+  text-align: center;
+  line-height: 200%;
+}
+
+.kavithai-header,
+.oviyam-header,
+.sirukadhai-header,
+.puthaga-vimarsanam-header,
+.vasanam-header,
+.vidukadhai-header,
+.naatkurippu-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.kavithai-link,
+.oviyam-link,
+.sirukadhai-link,
+.puthaga-vimarsanam-link,
+.vasanam-link,
+.vidukadhai-link,
+.naatkurippu-link {
+  color: #fff0f0;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 200px;
+  border: 1px solid #fff0f0;
+}
+
+@media screen and (max-width: 1000px) {
+  .kavithai-bg,
+  .oviyam-bg,
+  .sirukadhai-bg,
+  .puthaga-vimarsanam-bg,
+  .vasanam-bg,
+  .vidukadhai-bg,
+  .naatkurippu-bg {
+    height: 1000px;
+  }
+
+  .kavithai-nav,
+  .oviyam-nav,
+  .sirukadhai-nav,
+  .puthaga-vimarsanam-nav,
+  .vasanam-nav,
+  .vidukadhai-nav,
+  .naatkurippu-nav {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .kavithai-title,
+  .oviyam-title,
+  .sirukadhai-title,
+  .puthaga-vimarsanam-title,
+  .vasanam-title,
+  .vidukadhai-title,
+  .naatkurippu-title {
+    font-size: 56px;
+    max-width: 500px;
+  }
 }

@@ -1,3 +1,13 @@
+body,
+html {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.home-screen {
+  position: relative;
+}
+
 .home-screen-bg {
   width: 100%;
   height: 900px;
@@ -8,14 +18,90 @@
 .home-screen-title {
   font-size: 56px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  width: 100%;
   z-index: 1;
   color: #fff0f0;
   width: 600px;
   text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+}
+
+.home-screen-nav {
+  display: none;
+}
+
+.home-screen-link {
+  font-size: 18px;
+}
+
+.home-screen-elements {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  color: #fff0f0;
+  width: 100%; /* Adjust width as needed */
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem; /* Add padding for spacing */
+}
+
+.home-screen-link {
+  color: #fff0f0;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 0.5rem 1rem;
+  border-radius: 200px;
+  border: 1px solid #fff0f0;
+}
+
+.home-screen-elements {
+  position: absolute;
+  top: 50%; /* Position elements 50% down from the top of the parent */
+  left: 50%; /* Position elements 50% across from the left of the parent */
+  transform: translate(-50%, -50%); /* Center the elements */
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  color: #fff0f0;
+  width: 100%; /* Adjust width as needed */
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem; /* Add padding for spacing */
+}
+
+@media screen and (max-width: 1000px) {
+  .home-screen-elements {
+    max-width: 80%; /* Adjust maximum width as needed for responsiveness */
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .home-screen-elements {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .home-screen-nav {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .home-screen-title {
+    font-size: 46px;
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .home-screen-title {
+    font-size: 42px;
+  }
 }

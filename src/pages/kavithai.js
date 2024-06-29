@@ -43,11 +43,40 @@ const Kavithai = () => {
           alt="bg-kavithai"
           className="kavithai-bg"
         />
-        <div className="kavithai-title">கவிதை</div>
+        <div className="kavithai-header">
+          <div className="kavithai-title">கவிதை</div>
+          <div className="kavithai-nav">
+            <Link href="/kavithai" className="kavithai-link ">
+              கவிதை
+            </Link>
+            <Link href="/oviyam" className="kavithai-link ">
+              ஓவியம்
+            </Link>
+            <Link href="/sirukadhai" className="kavithai-link ">
+              சிறுகதை
+            </Link>
+            <Link href="/puthaga-vimarsanam" className="kavithai-link ">
+              புத்தக விமர்சனம்
+            </Link>
+            <Link href="/vasanam" className="kavithai-link">
+              வசனம்
+            </Link>
+            <Link href="/vidukadhai" className="kavithai-link">
+              விடுகதை
+            </Link>
+            <Link href="/naatkurippu" className="kavithai-link ">
+              நாட்குறிப்பு
+            </Link>
+          </div>
+        </div>
       </div>
       <div className="kavithai-content">
         {kavithai.map((kavithai) => (
-          <Link key={kavithai.id} href={`/kavithai/${kavithai.id}`}>
+          <Link
+            key={kavithai.id}
+            href={`/kavithai/${kavithai.id}`}
+            className="link-card-1"
+          >
             <Card1
               key={kavithai.id}
               title={kavithai.title}

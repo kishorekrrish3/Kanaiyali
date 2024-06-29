@@ -51,13 +51,45 @@ const PuthagaVimarsanam = () => {
           alt="bg-puthaga-vimarsanam"
           className="puthaga-vimarsanam-bg"
         />
-        <div className="puthaga-vimarsanam-title">புத்தக விமர்சனம்</div>
+        <div className="puthaga-vimarsanam-header">
+          <div className="puthaga-vimarsanam-title">புத்தக விமர்சனம்</div>
+          <div className="puthaga-vimarsanam-nav">
+            <Link href="/kavithai" className="puthaga-vimarsanam-link ">
+              கவிதை
+            </Link>
+            <Link href="/oviyam" className="puthaga-vimarsanam-link ">
+              ஓவியம்
+            </Link>
+            <Link href="/sirukadhai" className="puthaga-vimarsanam-link ">
+              சிறுகதை
+            </Link>
+            <Link
+              href="/puthaga-vimarsanam"
+              className="puthaga-vimarsanam-link "
+            >
+              புத்தக விமர்சனம்
+            </Link>
+            <Link href="/vasanam" className="puthaga-vimarsanam-link">
+              வசனம்
+            </Link>
+            <Link href="/vidukadhai" className="puthaga-vimarsanam-link">
+              விடுகதை
+            </Link>
+            <Link href="/naatkurippu" className="puthaga-vimarsanam-link ">
+              நாட்குறிப்பு
+            </Link>
+          </div>
+        </div>
       </div>
       <div className="puthaga-vimarsanam-content">
         {books.map((book) => {
           const person = people.find((p) => p.name === book.name);
           return (
-            <Link key={book.id} href={`/puthaga-vimarsanam/${book.id}`}>
+            <Link
+              key={book.id}
+              href={`/puthaga-vimarsanam/${book.id}`}
+              className="link-card-2"
+            >
               <Card2
                 title={book.title}
                 subtitle={book.subtitle}

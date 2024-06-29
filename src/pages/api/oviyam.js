@@ -3,7 +3,7 @@ import path from "path";
 
 export default async function handler(req, res) {
   try {
-    const dbPath = path.join(process.cwd(), "db.json");
+    const dbPath = path.join(process.cwd(), "_data/db.json");
     const dbData = await fs.readFile(dbPath, "utf-8");
     const oviyamData = JSON.parse(dbData)["oviyam"];
 

@@ -18,12 +18,14 @@ body {
   overflow-x: hidden;
 }
 
-.loading {
-  text-align: center;
-  font-family: "Montserrat";
+.loading-element {
+  height: 100%;
+  width: 100%;
   font-size: 24px;
-  font-weight: 500;
-  margin-top: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+  font-weight: 600;
+  font-family: "Montserrat";
 }
 
 /* BOOK */
@@ -120,6 +122,105 @@ body {
 }
 
 .book-page-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* DRAWING */
+.oviyam-page {
+  background-color: #fff0f0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 3rem;
+}
+
+.drawing-page-img {
+  width: 860px;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 8px 8px 56px 0px rgba(0, 0, 0, 0.01);
+}
+
+.drawing-page-img-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.drawing-page-title {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 38px;
+  padding-bottom: 1rem;
+}
+
+.drawing-page-subtitle {
+  text-align: center;
+  margin-top: 1rem;
+  padding-bottom: 2.5rem;
+  font-size: 16px;
+}
+
+.drawing-page-name {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.drawing-page-date-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.drawing-page-name-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.drawing-page-name-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.drawing-page-content {
+  font-size: 18px;
+  line-height: 180%;
+  text-align: justify;
+  margin-top: 3rem;
+}
+
+.drawing-page-person-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 200px;
+  object-fit: cover;
+}
+
+.drawing-page-date {
+  font-size: 18px;
+}
+
+.drawing-page-info {
+  background-color: #fff1f1;
+  box-shadow: 8px 8px 56px 0px rgba(0, 0, 0, 0.05);
+  padding-top: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 4rem;
+  max-width: 860px;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.drawing-page-info-container {
   display: flex;
   align-items: center;
   justify-content: center;

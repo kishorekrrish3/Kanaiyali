@@ -42,11 +42,40 @@ const Vasanam = () => {
           alt="bg-vasanam"
           className="vasanam-bg"
         />
-        <div className="vasanam-title">வசனம்</div>
+        <div className="vasanam-header">
+          <div className="vasanam-title">வசனம்</div>
+          <div className="vasanam-nav">
+            <Link href="/kavithai" className="vasanam-link ">
+              கவிதை
+            </Link>
+            <Link href="/oviyam" className="vasanam-link ">
+              ஓவியம்
+            </Link>
+            <Link href="/sirukadhai" className="vasanam-link ">
+              சிறுகதை
+            </Link>
+            <Link href="/puthaga-vimarsanam" className="vasanam-link ">
+              புத்தக விமர்சனம்
+            </Link>
+            <Link href="/vasanam" className="vasanam-link">
+              வசனம்
+            </Link>
+            <Link href="/vidukadhai" className="vasanam-link">
+              விடுகதை
+            </Link>
+            <Link href="/naatkurippu" className="vasanam-link ">
+              நாட்குறிப்பு
+            </Link>
+          </div>
+        </div>
       </div>
       <div className="vasanam-content">
         {vasanam.map((vasanam) => (
-          <Link key={vasanam.id} href={`/vasanam/${vasanam.id}`}>
+          <Link
+            key={vasanam.id}
+            href={`/vasanam/${vasanam.id}`}
+            className="link-card-1"
+          >
             <Card1
               key={vasanam.id}
               title={vasanam.title}

@@ -42,11 +42,40 @@ const naatkurippu = () => {
           alt="bg-naatkurippu"
           className="naatkurippu-bg"
         />
-        <div className="naatkurippu-title">நாட்குறிப்பு</div>
+        <div className="naatkurippu-header">
+          <div className="naatkurippu-title">நாட்குறிப்பு</div>
+          <div className="naatkurippu-nav">
+            <Link href="/kavithai" className="naatkurippu-link ">
+              கவிதை
+            </Link>
+            <Link href="/oviyam" className="naatkurippu-link ">
+              ஓவியம்
+            </Link>
+            <Link href="/sirukadhai" className="naatkurippu-link ">
+              சிறுகதை
+            </Link>
+            <Link href="/puthaga-vimarsanam" className="naatkurippu-link ">
+              புத்தக விமர்சனம்
+            </Link>
+            <Link href="/vasanam" className="naatkurippu-link">
+              வசனம்
+            </Link>
+            <Link href="/vidukadhai" className="naatkurippu-link">
+              விடுகதை
+            </Link>
+            <Link href="/naatkurippu" className="naatkurippu-link ">
+              நாட்குறிப்பு
+            </Link>
+          </div>
+        </div>
       </div>
       <div className="naatkurippu-content">
         {naatkurippu.map((naatkurippu) => (
-          <Link key={naatkurippu.id} href={`/naatkurippu/${naatkurippu.id}`}>
+          <Link
+            key={naatkurippu.id}
+            href={`/naatkurippu/${naatkurippu.id}`}
+            className="link-card-1"
+          >
             <Card1
               key={naatkurippu.id}
               title={naatkurippu.title}

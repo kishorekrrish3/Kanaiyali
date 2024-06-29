@@ -42,11 +42,40 @@ const sirukadhai = () => {
           alt="bg-sirukadhai"
           className="sirukadhai-bg"
         />
-        <div className="sirukadhai-title">சிறுகதை</div>
+        <div className="sirukadhai-header">
+          <div className="sirukadhai-title">சிறுகதை</div>
+          <div className="sirukadhai-nav">
+            <Link href="/kavithai" className="sirukadhai-link ">
+              கவிதை
+            </Link>
+            <Link href="/oviyam" className="sirukadhai-link ">
+              ஓவியம்
+            </Link>
+            <Link href="/sirukadhai" className="sirukadhai-link ">
+              சிறுகதை
+            </Link>
+            <Link href="/puthaga-vimarsanam" className="sirukadhai-link ">
+              புத்தக விமர்சனம்
+            </Link>
+            <Link href="/vasanam" className="sirukadhai-link">
+              வசனம்
+            </Link>
+            <Link href="/vidukadhai" className="sirukadhai-link">
+              விடுகதை
+            </Link>
+            <Link href="/naatkurippu" className="sirukadhai-link ">
+              நாட்குறிப்பு
+            </Link>
+          </div>
+        </div>
       </div>
       <div className="sirukadhai-content">
         {sirukadhai.map((sirukadhai) => (
-          <Link key={sirukadhai.id} href={`/sirukadhai/${sirukadhai.id}`}>
+          <Link
+            key={sirukadhai.id}
+            href={`/sirukadhai/${sirukadhai.id}`}
+            className="link-card-1"
+          >
             <Card1
               key={sirukadhai.id}
               title={sirukadhai.title}

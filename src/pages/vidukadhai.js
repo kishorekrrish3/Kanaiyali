@@ -35,18 +35,47 @@ const vidukadhai = () => {
 
   return (
     <div className="vidukadhai">
-      <div className="vidhukadhai-elements">
+      <div className="vidukadhai-elements">
         <Navbar />
         <img
           src="assets/bg-vidukadhai.png"
           alt="bg-vidukadhai"
           className="vidukadhai-bg"
         />
-        <div className="vidukadhai-title">விடுகதை</div>
+        <div className="vidukadhai-header">
+          <div className="vidukadhai-title">விடுகதை</div>
+          <div className="vidukadhai-nav">
+            <Link href="/kavithai" className="vidukadhai-link ">
+              கவிதை
+            </Link>
+            <Link href="/oviyam" className="vidukadhai-link ">
+              ஓவியம்
+            </Link>
+            <Link href="/sirukadhai" className="vidukadhai-link ">
+              சிறுகதை
+            </Link>
+            <Link href="/puthaga-vimarsanam" className="vidukadhai-link ">
+              புத்தக விமர்சனம்
+            </Link>
+            <Link href="/vasanam" className="vidukadhai-link">
+              வசனம்
+            </Link>
+            <Link href="/vidukadhai" className="vidukadhai-link">
+              விடுகதை
+            </Link>
+            <Link href="/naatkurippu" className="vidukadhai-link ">
+              நாட்குறிப்பு
+            </Link>
+          </div>
+        </div>
       </div>
       <div className="vidukadhai-content">
         {vidukadhai.map((vidukadhai) => (
-          <Link key={vidukadhai.id} href={`/vidukadhai/${vidukadhai.id}`}>
+          <Link
+            key={vidukadhai.id}
+            href={`/vidukadhai/${vidukadhai.id}`}
+            className="link-card-1"
+          >
             <Card1
               key={vidukadhai.id}
               title={vidukadhai.title}

@@ -258,6 +258,7 @@
 .card-3 {
   transition: transform 0.3s ease-in-out;
 }
+
 .card-1:hover,
 .card-2:hover,
 .card-3:hover {
@@ -269,4 +270,122 @@
 }
 .card-3-drawing:hover {
   transform: scale(1.03);
+}
+
+Link,
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 860px) {
+  .card-1,
+  .card-2,
+  .card-3 {
+    transform: scale(0.9);
+  }
+  .link-card-1 {
+    height: 240px;
+  }
+  .link-card-2 {
+    height: 340px;
+  }
+  .link-card-3 {
+    height: 500px;
+  }
+  .card-1:hover,
+  .card-2:hover,
+  .card-3:hover {
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .card-1,
+  .card-2,
+  .card-3 {
+    transform: scale(0.7);
+  }
+  .link-card-1 {
+    height: 190px;
+  }
+  .link-card-2 {
+    height: 260px;
+  }
+  .link-card-3 {
+    height: 390px;
+  }
+  .card-1:hover,
+  .card-2:hover,
+  .card-3:hover {
+    transform: scale(0.7);
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .card-1,
+  .card-2,
+  .card-3 {
+    transform: scale(0.55);
+  }
+  .link-card-1 {
+    height: 140px;
+  }
+  .link-card-2 {
+    height: 200px;
+  }
+  .link-card-3 {
+    height: 300px;
+  }
+  .card-1:hover,
+  .card-2:hover,
+  .card-3:hover {
+    transform: scale(0.55);
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .card-1,
+  .card-2,
+  .card-3 {
+    transform: scale(0.45);
+  }
+  .link-card-1 {
+    height: 116px;
+  }
+  .link-card-2 {
+    height: 160px;
+  }
+  .link-card-3 {
+    height: 240px;
+  }
+  .card-1:hover,
+  .card-2:hover,
+  .card-3:hover {
+    transform: scale(0.45);
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .card-1,
+  .card-2,
+  .card-3 {
+    transform: scale(0.4);
+  }
+  .kavithai-content {
+    gap: 0.1rem; /* Further reduce gap */
+  }
+  .link-card-2 {
+    height: 140px;
+  }
+  .link-card-3 {
+    height: 216px;
+  }
+  .card-1:hover,
+  .card-2:hover,
+  .card-3:hover {
+    transform: scale(0.4);
+  }
 }

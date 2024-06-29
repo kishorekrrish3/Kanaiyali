@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./HomeContent.css";
 
 const HomeContent = () => {
@@ -60,7 +60,12 @@ const HomeContent = () => {
         <h1 className="content-4-title">நிகழ்ச்சிகள்</h1>
         <div className="img-frame">
           <div className="content-4-partition">
-            <img src="assets/img-1.png" alt="img-1" className="content-4-img" />
+            <div className="img-slideshow">
+              <img src="assets/img-1.png" alt="img-1" className="slide-img" />
+              <img src="assets/img-2.jpg" alt="img-1" className="slide-img" />
+              <img src="assets/img-3.jpg" alt="img-1" className="slide-img" />
+            </div>
+
             <ul className="content-4-text">
               <li className="list-item">சட்டம்பேசு</li>
               <li className="list-item">மாதிரி சட்டசபை</li>
