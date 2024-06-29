@@ -1,9 +1,8 @@
 /* CARD 1 */
-.card-1 {
+/* .card-1 {
   background-color: #fff1f1;
   border-radius: 16px;
   max-width: 640px;
-  width: 100%;
   border: 1px solid #acacac;
   box-shadow: 8px 8px 56px 0px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -72,6 +71,139 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+} */
+
+/* CARD 1 */
+.card-1 {
+  background-color: #fff1f1;
+  border-radius: 16px;
+  max-width: 640px;
+  width: 100%;
+  border: 1px solid #acacac;
+  box-shadow: 8px 8px 56px 0px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+}
+
+.card-1-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 200px;
+}
+
+.card-1-container-1,
+.card-1-container-2,
+.card-1-container-0 {
+  display: flex;
+}
+
+.card-1-calendar-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.card-1-name {
+  font-size: 18px;
+}
+
+.card-1-container-1 {
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-1-container-0 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.card-1-title {
+  font-size: 34px;
+}
+
+.card-1-subtitle {
+  color: #777777;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.card-1-container-3 {
+  padding-top: 0.5rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: center;
+  width: 100%;
+}
+
+.card-1-date {
+  font-weight: 300;
+}
+
+.card-1-container-2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ANIMATIONS */
+.card-1 {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-1:hover {
+  transform: scale(1.03);
+}
+
+/* RESPONSIVENESS */
+@media screen and (min-width: 841px) {
+  .card-1 {
+    min-width: 480px;
+  }
+}
+
+@media screen and (min-width: 421px) and (max-width: 559px) {
+  .card-1 {
+    min-width: 180px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .card-1 {
+    padding: 2rem;
+  }
+
+  .card-1-title {
+    font-size: 28px;
+  }
+
+  .card-1-container-1,
+  .card-1-container-2 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .card-1-container-2 {
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  .card-1-container-3 {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .card-1-container-0 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .card-1-container-2 {
+    width: 100%;
+  }
 }
 
 /* ------------------------------------------------ */
@@ -80,13 +212,14 @@
 .card-2 {
   background-color: #fff1f1;
   border-radius: 16px;
-  width: 640px;
+  max-width: 640px;
   width: 100%;
   border: 1px solid #acacac;
   box-shadow: 8px 8px 56px 0px rgba(0, 0, 0, 0.05);
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: row;
   padding: 2rem;
+  padding-right: 6rem;
   gap: 3rem;
 }
 
@@ -160,8 +293,88 @@
   gap: 0.5rem;
 }
 
+/* RESPONSIVENESS */
+@media screen and (max-width: 840px) {
+  .card-2 {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .card-2-book {
+    width: 60%;
+    border-radius: 0.5rem;
+  }
+
+  .card-2-container-0 {
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .card-2-container-1 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .card-2-container-2 {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+  }
+
+  .card-2-title {
+    font-size: 24px;
+  }
+
+  .card-2-subtitle {
+    font-size: 12px;
+  }
+
+  .card-2-container-3 {
+    width: 100%;
+    padding-bottom: 2rem;
+    text-align: center;
+    align-items: center;
+  }
+  .card-2-outer-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card-2-container-0 {
+    flex-direction: column;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .card-2-container-1,
+  .card-2-container-2 {
+    width: 100%;
+    flex-direction: row;
+  }
+  .card-2-container-1 {
+    justify-content: flex-start;
+  }
+  .card-2-container-2 {
+    justify-content: flex-end;
+  }
+  .card-2-book {
+    width: 90%;
+    border-radius: 0.5rem;
+  }
+}
+
 /* ------------------------------------------------ */
 
+/* CARD 3 */
 /* CARD 3 */
 .card-3 {
   background-color: #fff1f1;
@@ -252,6 +465,87 @@
   box-shadow: 8px 8px 56px 0px rgba(0, 0, 0, 0.05);
 }
 
+/* RESPONSIVENESS */
+@media screen and (max-width: 840px) {
+  .card-3 {
+    padding: 1rem 2rem;
+    margin: 0 1rem; /* Add padding between screen edges and cards */
+  }
+
+  .card-3-title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .card-3-subtitle {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .card-3-container-0 {
+    gap: 1rem;
+  }
+
+  .card-3-container-1,
+  .card-3-container-2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .card-3-container-3 {
+    align-items: center;
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+
+  .card-3-drawing {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card-3 {
+    padding: 1rem;
+  }
+
+  .card-3-container-0 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .card-3-title {
+    font-size: 20px;
+  }
+
+  .card-3-container-1,
+  .card-3-container-2 {
+    width: 100%;
+    flex-direction: row;
+  }
+  .card-3-container-1 {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .card-3-container-2 {
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .card-3-subtitle {
+    font-size: 10px;
+  }
+
+  .card-3-container-3 {
+    padding-bottom: 1rem;
+  }
+
+  .card-3-drawing {
+    width: 100%;
+  }
+}
+
 /* ANIMATIONS */
 .card-1,
 .card-2,
@@ -280,7 +574,7 @@ a {
 }
 
 /* RESPONSIVE */
-@media screen and (max-width: 860px) {
+/* @media screen and (max-width: 860px) {
   .card-1,
   .card-2,
   .card-3 {
@@ -330,6 +624,17 @@ a {
   .card-3 {
     transform: scale(0.55);
   }
+  .card-1-title {
+    font-size: 38px;
+  }
+  .card-1-subtitle {
+    font-size: 20px;
+    text-align: center;
+  }
+  .card-1-name {
+    font-size: 24px;
+  }
+
   .link-card-1 {
     height: 140px;
   }
@@ -374,9 +679,10 @@ a {
   .card-3 {
     transform: scale(0.4);
   }
+
   .kavithai-content {
     gap: 0.1rem; /* Further reduce gap */
-  }
+/* }
   .link-card-2 {
     height: 140px;
   }
@@ -388,4 +694,7 @@ a {
   .card-3:hover {
     transform: scale(0.4);
   }
+} */
+
+@media screen and (max-width: 840px) {
 }
