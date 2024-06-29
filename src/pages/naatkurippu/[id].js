@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Navbar from "../Main/Navbar/Navbar";
 import Footer from "../Main/Footer/Footer";
 import "../master.css";
+import Link from "next/link";
 
 const NaatkurippuContent = () => {
   const router = useRouter();
@@ -61,6 +62,31 @@ const NaatkurippuContent = () => {
   return (
     <div className="naatkurippu-page">
       <Navbar />
+      <div className="naatkurippu-page-header">
+        <div className="naatkurippu-page-nav">
+          <Link href="/kavithai" className="naatkurippu-page-link ">
+            கவிதை
+          </Link>
+          <Link href="/oviyam" className="naatkurippu-page-link ">
+            ஓவியம்
+          </Link>
+          <Link href="/sirukadhai" className="naatkurippu-page-link ">
+            சிறுகதை
+          </Link>
+          <Link href="/puthaga-vimarsanam" className="naatkurippu-page-link ">
+            புத்தக விமர்சனம்
+          </Link>
+          <Link href="/vasanam" className="naatkurippu-page-link">
+            வசனம்
+          </Link>
+          <Link href="/vidukadhai" className="naatkurippu-page-link">
+            விடுகதை
+          </Link>
+          <Link href="/naatkurippu" className="naatkurippu-page-link ">
+            நாட்குறிப்பு
+          </Link>
+        </div>
+      </div>
       <div className="naatkurippu-page-details">
         <div className="naatkurippu-page-info">
           <h1 className="naatkurippu-page-title">{naatkurippu.title}</h1>

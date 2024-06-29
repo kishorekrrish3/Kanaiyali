@@ -28,6 +28,54 @@ body {
   font-family: "Montserrat";
 }
 
+/* PAGE NAV BUTTONS */
+
+.kavithai-page-link,
+.sirukadhai-page-link,
+.oviyam-page-link,
+.puthaga-vimarsanam-page-link,
+.vasanam-page-link,
+.vidukadhai-page-link,
+.naatkurippu-page-link {
+  color: #f2bb2c;
+  font-size: 15px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 200px;
+  border: 2px solid #f2bb2c;
+  font-weight: 800;
+}
+
+.kavithai-page-nav,
+.sirukadhai-page-nav,
+.oviyam-page-nav,
+.puthaga-vimarsanam-page-nav,
+.vasanam-page-nav,
+.vidukadhai-page-nav,
+.naatkurippu-page-nav {
+  display: none;
+  text-align: center;
+  line-height: 200%;
+}
+
+@media screen and (max-width: 1000px) {
+  .kavithai-page-nav,
+  .sirukadhai-page-nav,
+  .oviyam-page-nav,
+  .puthaga-vimarsanam-page-nav,
+  .vasanam-page-nav,
+  .vidukadhai-page-nav,
+  .naatkurippu-page-nav {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 /* BOOK */
 .puthaga-vimarsanam-page {
   background-color: #fff0f0;
@@ -127,6 +175,19 @@ body {
   justify-content: center;
 }
 
+@media screen and (max-width: 560px) {
+  .book-page-name-date,
+  .naatkurippu-page-name-date,
+  .vasanam-page-name-date,
+  .kavithai-page-name-date,
+  .sirukadhai-page-name-date,
+  .vidukadhai-page-name-date,
+  .drawing-page-name-date {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+}
+
 /* DRAWING */
 .oviyam-page {
   background-color: #fff0f0;
@@ -137,7 +198,7 @@ body {
 }
 
 .drawing-page-img {
-  width: 860px;
+  max-width: 860px;
   height: auto;
   border-radius: 0.5rem;
   box-shadow: 8px 8px 56px 0px rgba(0, 0, 0, 0.01);
@@ -210,10 +271,10 @@ body {
 .drawing-page-info {
   background-color: #fff1f1;
   box-shadow: 8px 8px 56px 0px rgba(0, 0, 0, 0.05);
-  padding-top: 2rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 3rem;
   max-width: 860px;
   border-radius: 1rem;
   margin-top: 2rem;
@@ -224,6 +285,136 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* General styles for the oviyam page */
+.oviyam-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.oviyam-page-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.oviyam-page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.oviyam-page-link {
+  margin: 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.oviyam-page-nav {
+  gap: 0;
+}
+
+/* Responsive layout for drawing-page-details */
+.drawing-page-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 2rem;
+}
+
+.drawing-page-info-container {
+  max-width: 1200px;
+  width: 100%;
+  /* padding: 1rem; */
+  border-radius: 5px;
+}
+
+.drawing-page-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drawing-page-img-container {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 1rem;
+}
+
+.drawing-page-img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.drawing-page-header {
+  text-align: center;
+}
+
+.drawing-page-title {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.drawing-page-subtitle {
+  font-size: 1.5rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+
+.drawing-page-name-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.drawing-page-name-container {
+  display: flex;
+  align-items: center;
+}
+
+.drawing-page-person-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.drawing-page-name {
+  font-size: 1rem;
+}
+
+.drawing-page-date-container {
+  display: flex;
+  align-items: center;
+}
+
+.drawing-page-calendar-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
+.drawing-page-date {
+  font-size: 1rem;
+}
+
+.drawing-page-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.book-page-img-container {
+  padding: 0;
+  margin: 0;
 }
 
 /* KAVITHAI */
@@ -238,7 +429,7 @@ body {
 .kavithai-page-title {
   text-align: center;
   margin-top: 2rem;
-  font-size: 46px;
+  font-size: 2.5rem;
   padding-bottom: 1rem;
 }
 
@@ -246,12 +437,12 @@ body {
   text-align: center;
   margin-top: 0.5rem;
   padding-bottom: 2.5rem;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .kavithai-page-name {
   font-weight: 800;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .kavithai-page-name-container {
@@ -263,7 +454,7 @@ body {
 .kavithai-page-person-img {
   width: 52px;
   height: 52px;
-  border-radius: 200px;
+  border-radius: 50%;
   object-fit: cover;
 }
 
@@ -288,18 +479,18 @@ body {
 
 .kavithai-page-name-date {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
-  gap: 320px;
+  gap: 1rem;
 }
 
 .kavithai-page-date {
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 .kavithai-page-content {
-  font-size: 18px;
-  line-height: 240%;
+  font-size: 1.125rem;
+  line-height: 1.8;
   text-align: justify;
   margin-top: 3rem;
   white-space: pre-wrap;
@@ -308,15 +499,31 @@ body {
 .kavithai-page-info {
   background-color: #fff1f1;
   box-shadow: 8px 8px 56px 0px rgba(0, 0, 0, 0.08);
-  padding-top: 2rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  padding-bottom: 7rem;
+  padding: 2rem;
   max-width: 860px;
   width: 100%;
   border-radius: 1rem;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin: 2rem auto;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 600px) {
+  .kavithai-page-title {
+    font-size: 2rem;
+  }
+
+  .kavithai-page-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .kavithai-page-content {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .kavithai-page-info {
+    padding: 1rem;
+  }
 }
 
 /* VASANAM */
@@ -385,9 +592,8 @@ body {
 
 .vasanam-page-name-date {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
-  gap: 320px;
 }
 
 .vasanam-page-content {
@@ -478,9 +684,8 @@ body {
 
 .vidukadhai-page-name-date {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
-  gap: 320px;
 }
 
 .vidukadhai-page-content {
@@ -578,9 +783,8 @@ body {
 
 .naatkurippu-page-name-date {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
-  gap: 320px;
 }
 
 .naatkurippu-page-info {
@@ -670,9 +874,8 @@ body {
 
 .sirukadhai-page-name-date {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
-  gap: 320px;
 }
 
 .sirukadhai-page-info {
@@ -687,4 +890,24 @@ body {
   border-radius: 1rem;
   margin-top: 2rem;
   margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .vasanam-page-content,
+  .kavithai-page-content,
+  .sirukadhai-page-content,
+  .naatkurippu-page-content,
+  .vidukadhai-page-content {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .vasanam-page-content,
+  .kavithai-page-content,
+  .sirukadhai-page-content,
+  .naatkurippu-page-content,
+  .vidukadhai-page-content {
+    font-size: 14px;
+  }
 }

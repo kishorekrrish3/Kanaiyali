@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Navbar from "../Main/Navbar/Navbar";
 import Footer from "../Main/Footer/Footer";
 import "../master.css";
+import Link from "next/link";
 
 const KavithaiContent = () => {
   const router = useRouter();
@@ -61,6 +62,32 @@ const KavithaiContent = () => {
   return (
     <div className="kavithai-page">
       <Navbar />
+      <div className="kavithai-page-header">
+        <div className="kavithai-page-nav">
+          <Link href="/kavithai" className="kavithai-page-link ">
+            கவிதை
+          </Link>
+          <Link href="/oviyam" className="kavithai-page-link ">
+            ஓவியம்
+          </Link>
+          <Link href="/sirukadhai" className="kavithai-page-link ">
+            சிறுகதை
+          </Link>
+          <Link href="/puthaga-vimarsanam" className="kavithai-page-link ">
+            புத்தக விமர்சனம்
+          </Link>
+          <Link href="/vasanam" className="kavithai-page-link">
+            வசனம்
+          </Link>
+          <Link href="/vidukadhai" className="kavithai-page-link">
+            விடுகதை
+          </Link>
+          <Link href="/naatkurippu" className="kavithai-page-link ">
+            நாட்குறிப்பு
+          </Link>
+        </div>
+      </div>
+
       <div className="kavithai-page-details">
         <div className="kavithai-page-info">
           <h1 className="kavithai-page-title">{kavithai.title}</h1>

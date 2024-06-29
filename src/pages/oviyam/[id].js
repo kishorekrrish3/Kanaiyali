@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Navbar from "../Main/Navbar/Navbar";
 import Footer from "../Main/Footer/Footer";
 import "../master.css";
+import Link from "next/link";
 
 const OviyamContent = () => {
   const router = useRouter();
@@ -53,6 +54,32 @@ const OviyamContent = () => {
   return (
     <div className="oviyam-page">
       <Navbar />
+      <div className="oviyam-page-header">
+        <div className="oviyam-page-nav">
+          <Link href="/kavithai" className="oviyam-page-link ">
+            கவிதை
+          </Link>
+          <Link href="/oviyam" className="oviyam-page-link ">
+            ஓவியம்
+          </Link>
+          <Link href="/sirukadhai" className="oviyam-page-link ">
+            சிறுகதை
+          </Link>
+          <Link href="/puthaga-vimarsanam" className="oviyam-page-link ">
+            புத்தக விமர்சனம்
+          </Link>
+          <Link href="/vasanam" className="oviyam-page-link">
+            வசனம்
+          </Link>
+          <Link href="/vidukadhai" className="oviyam-page-link">
+            விடுகதை
+          </Link>
+          <Link href="/naatkurippu" className="oviyam-page-link ">
+            நாட்குறிப்பு
+          </Link>
+        </div>
+      </div>
+
       <div className="drawing-page-details">
         <div className="drawing-page-info-container">
           <div className="drawing-page-info">

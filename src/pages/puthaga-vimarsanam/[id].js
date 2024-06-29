@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Navbar from "../Main/Navbar/Navbar";
 import Footer from "../Main/Footer/Footer";
 import "../master.css";
+import Link from "next/link";
 
 const PuthagaVimarsanamContent = () => {
   const router = useRouter();
@@ -54,6 +55,35 @@ const PuthagaVimarsanamContent = () => {
   return (
     <div className="puthaga-vimarsanam-page">
       <Navbar />
+      <div className="puthaga-vimarsanam-page-header">
+        <div className="puthaga-vimarsanam-page-nav">
+          <Link href="/kavithai" className="puthaga-vimarsanam-page-link ">
+            கவிதை
+          </Link>
+          <Link href="/oviyam" className="puthaga-vimarsanam-page-link ">
+            ஓவியம்
+          </Link>
+          <Link href="/sirukadhai" className="puthaga-vimarsanam-page-link ">
+            சிறுகதை
+          </Link>
+          <Link
+            href="/puthaga-vimarsanam"
+            className="puthaga-vimarsanam-page-link "
+          >
+            புத்தக விமர்சனம்
+          </Link>
+          <Link href="/vasanam" className="puthaga-vimarsanam-page-link">
+            வசனம்
+          </Link>
+          <Link href="/vidukadhai" className="puthaga-vimarsanam-page-link">
+            விடுகதை
+          </Link>
+          <Link href="/naatkurippu" className="puthaga-vimarsanam-page-link ">
+            நாட்குறிப்பு
+          </Link>
+        </div>
+      </div>
+
       <div className="book-page-details">
         <div className="book-page-img-container">
           <img
