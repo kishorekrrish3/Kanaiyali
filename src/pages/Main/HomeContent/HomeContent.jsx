@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./HomeContent.css";
+import Slideshow from "@/pages/Slideshow";
 
 const HomeContent = () => {
   return (
@@ -60,11 +61,12 @@ const HomeContent = () => {
         <h1 className="content-4-title">நிகழ்ச்சிகள்</h1>
         <div className="img-frame">
           <div className="content-4-partition">
-            <div className="img-slideshow">
+            <Slideshow />
+            {/* <div className="img-slideshow">
               <img src="assets/img-1.png" alt="img-1" className="slide-img" />
               <img src="assets/img-2.jpg" alt="img-1" className="slide-img" />
               <img src="assets/img-3.jpg" alt="img-1" className="slide-img" />
-            </div>
+            </div> */}
 
             <ul className="content-4-text">
               <li className="list-item">சட்டம்பேசு</li>
