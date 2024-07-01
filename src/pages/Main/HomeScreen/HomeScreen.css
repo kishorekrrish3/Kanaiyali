@@ -97,4 +97,8 @@ html {
   .home-screen-title {
     font-size: 46px;
   }
+  .home-screen-link {
+    font-size: 18px;
+    font-weight: 800;
+  }
 }

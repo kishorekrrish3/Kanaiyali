@@ -180,14 +180,14 @@
   .content-2-title,
   .content-3-title {
     font-size: 32px;
-    text-align: center;
+    text-align: right;
     padding: 0;
   }
   .content-1-text,
   .content-2-text,
   .content-3-text {
     font-size: 14px;
-    text-align: justify;
+    text-align: left;
     padding: 0;
   }
 }
@@ -205,6 +205,9 @@
     font-size: 12px;
     padding-right: 1rem;
     padding-left: 1rem;
+  }
+  .content-3-title {
+    width: 100%;
   }
 }
 
@@ -264,6 +267,7 @@
   .content-2-text,
   .content-3-text {
     font-size: 18px;
+    text-align: left;
   }
   .content-1-title,
   .content-2-title,
@@ -277,6 +281,8 @@
   .content-2-title,
   .content-3-title {
     font-size: 36px;
+    text-align: right;
+    justify-content: flex-end;
   }
   .img-slideshow {
     margin: 0;
@@ -295,6 +301,7 @@
   .content-2-text,
   .content-3-text {
     font-size: 16px;
+    text-align: left;
   }
 }
 
