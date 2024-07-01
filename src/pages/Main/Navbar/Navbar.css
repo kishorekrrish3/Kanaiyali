@@ -138,3 +138,9 @@
     transform: rotate(45deg) translate(-5px, -6px);
   }
 }
+
+.navbar-link:hover {
+  color: #711cd3;
+  /* font-size: 15px; */
+  padding-bottom: 0.5rem;
+}
