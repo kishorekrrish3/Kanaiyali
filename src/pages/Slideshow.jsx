@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const Slideshow = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = ["assets/img-1.png", "assets/img-2.jpg", "assets/img-3.jpg"];
+  const images = ["assets/img-1.png", "assets/img-2.JPG", "assets/img-3.jpg"];
 
   useEffect(() => {
     const interval = setInterval(() => {

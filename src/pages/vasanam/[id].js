@@ -54,7 +54,7 @@ const VasanamContent = () => {
   }, [id]); // Include id in the dependency array to fetch on route change
 
   if (!vasanam) {
-    return <div>Loading...</div>;
+    return <div className="loading-element">Loading...</div>;
   }
 
   const person = people.find((p) => p.name === vasanam.name);

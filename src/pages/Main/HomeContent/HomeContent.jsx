@@ -62,11 +62,6 @@ const HomeContent = () => {
         <div className="img-frame">
           <div className="content-4-partition">
             <Slideshow />
-            {/* <div className="img-slideshow">
-              <img src="assets/img-1.png" alt="img-1" className="slide-img" />
-              <img src="assets/img-2.jpg" alt="img-1" className="slide-img" />
-              <img src="assets/img-3.jpg" alt="img-1" className="slide-img" />
-            </div> */}
 
             <ul className="content-4-text">
               <li className="list-item">சட்டம்பேசு</li>

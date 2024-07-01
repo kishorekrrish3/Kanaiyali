@@ -260,9 +260,24 @@
     height: 300px;
     object-fit: contain;
   }
+  .content-1-text,
+  .content-2-text,
+  .content-3-text {
+    font-size: 18px;
+  }
+  .content-1-title,
+  .content-2-title,
+  .content-3-title {
+    font-size: 38px;
+  }
 }
 
 @media screen and (max-width: 520px) {
+  .content-1-title,
+  .content-2-title,
+  .content-3-title {
+    font-size: 36px;
+  }
   .img-slideshow {
     margin: 0;
   }
@@ -270,11 +285,28 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
+  .content-1,
+  .content-2,
+  .content-3 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .content-1-text,
+  .content-2-text,
+  .content-3-text {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .img-slideshow {
     height: 200px;
+  }
+  .content-1,
+  .content-2,
+  .content-3 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 

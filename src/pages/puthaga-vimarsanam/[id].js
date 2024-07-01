@@ -47,7 +47,7 @@ const PuthagaVimarsanamContent = () => {
   }, [id]);
 
   if (!book) {
-    return <div className="loading">Loading...</div>;
+    return <div className="loading-element">Loading...</div>;
   }
 
   const person = people.find((p) => p.name === book.name);
