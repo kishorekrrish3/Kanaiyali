@@ -72,6 +72,7 @@ const Oviyam = () => {
       <div className="oviyam-content">
         {drawings.map((drawing) => {
           const person = people.find((p) => p.name === drawing.name);
+          console.log(person);
           return (
             <Link
               key={drawing.id}

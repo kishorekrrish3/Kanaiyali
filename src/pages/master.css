@@ -45,37 +45,6 @@ body {
   font-weight: 800;
 }
 
-.kavithai-page-nav,
-.sirukadhai-page-nav,
-.oviyam-page-nav,
-.puthaga-vimarsanam-page-nav,
-.vasanam-page-nav,
-.vidukadhai-page-nav,
-.naatkurippu-page-nav {
-  display: none;
-  text-align: center;
-  line-height: 200%;
-}
-
-@media screen and (max-width: 1000px) {
-  .kavithai-page-nav,
-  .sirukadhai-page-nav,
-  .oviyam-page-nav,
-  .puthaga-vimarsanam-page-nav,
-  .vasanam-page-nav,
-  .vidukadhai-page-nav,
-  .naatkurippu-page-nav {
-    margin-top: 3rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    align-items: center;
-    justify-content: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
 /* BOOK */
 .puthaga-vimarsanam-page {
   background-color: #fff0f0;
@@ -224,7 +193,7 @@ body {
   text-align: center;
   margin-top: 1rem;
   padding-bottom: 2.5rem;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .drawing-page-name {
@@ -361,9 +330,12 @@ body {
 }
 
 .drawing-page-subtitle {
-  font-size: 1.5rem;
+  font-size: 18px;
+  line-height: 200%;
   color: #6c757d;
   margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .drawing-page-name-date {
@@ -900,6 +872,37 @@ body {
   .vidukadhai-page-content {
     font-size: 16px;
     padding-bottom: 4rem;
+  }
+}
+
+.kavithai-page-nav,
+.sirukadhai-page-nav,
+.oviyam-page-nav,
+.puthaga-vimarsanam-page-nav,
+.vasanam-page-nav,
+.vidukadhai-page-nav,
+.naatkurippu-page-nav {
+  display: none;
+  text-align: center;
+  line-height: 200%;
+}
+
+@media screen and (max-width: 1000px) {
+  .kavithai-page-nav,
+  .sirukadhai-page-nav,
+  .oviyam-page-nav,
+  .puthaga-vimarsanam-page-nav,
+  .vasanam-page-nav,
+  .vidukadhai-page-nav,
+  .naatkurippu-page-nav {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
