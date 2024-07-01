@@ -12,7 +12,7 @@ export default function index() {
       <Head>
         <title>Kanaiyali</title>
         <meta name="description" content="By Arignar Anna Thamizh Mandram" />
-        <link rel="icon" href="/assets/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
       <HomeScreen />
