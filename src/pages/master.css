@@ -921,14 +921,4 @@ body {
   .puthaga-vimarsanam-page-link {
     font-size: 18px;
   }
-  .vasanam-link,
-  .kavithai-link,
-  .sirukadhai-link,
-  .naatkurippu-link,
-  .vidukadhai-link,
-  .oviyam-link,
-  .puthaga-vimarsanam-link {
-    font-size: 18px;
-    font-weight: 800;
-  }
 }
