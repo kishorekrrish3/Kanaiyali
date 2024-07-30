@@ -2,6 +2,7 @@
   color: #f2bb2c;
   font-size: 46px;
   padding-left: 4rem;
+  text-align: center;
 }
 
 .content-1 {
@@ -10,12 +11,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 360px;
   box-shadow: 0px 16px 56px 0px rgba(0, 0, 0, 0.05);
+  padding-top: 2rem;
 }
 
 .content-1-text {
-  text-align: right;
+  text-align: left;
   width: 900px;
   font-size: 18px;
   font-weight: 400;
@@ -36,6 +37,7 @@
   color: #f2bb2c;
   font-size: 38px;
   padding-right: 4rem;
+  text-align: center;
 }
 
 .content-2 {
@@ -69,6 +71,7 @@
 .content-3-title {
   color: #f2bb2c;
   font-size: 46px;
+  text-align: center;
 }
 
 .content-3 {
@@ -82,7 +85,7 @@
 }
 
 .content-3-text {
-  text-align: justify;
+  text-align: left;
   width: 1260px;
   font-size: 18px;
   font-weight: 400;
@@ -175,12 +178,13 @@
   }
   .content-4-title {
     font-size: 28px;
+    text-align: center;
   }
   .content-1-title,
   .content-2-title,
   .content-3-title {
     font-size: 32px;
-    text-align: right;
+    text-align: center;
     padding: 0;
   }
   .content-1-text,
@@ -198,6 +202,7 @@
   .content-3-title,
   .content-4-title {
     font-size: 28px;
+    text-align: center;
   }
   .content-1-text,
   .content-2-text,
@@ -208,6 +213,7 @@
   }
   .content-3-title {
     width: 100%;
+    text-align: center;
   }
 }
 
@@ -273,6 +279,7 @@
   .content-2-title,
   .content-3-title {
     font-size: 38px;
+    text-align: center;
   }
 }
 
@@ -281,7 +288,7 @@
   .content-2-title,
   .content-3-title {
     font-size: 36px;
-    text-align: right;
+    text-align: center;
     justify-content: flex-end;
   }
   .img-slideshow {

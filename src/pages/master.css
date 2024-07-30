@@ -110,7 +110,7 @@ body {
 .book-page-content {
   font-size: 18px;
   line-height: 180%;
-  text-align: justify;
+  text-align: left;
   margin-top: 3rem;
 }
 
@@ -222,7 +222,7 @@ body {
 .drawing-page-content {
   font-size: 18px;
   line-height: 180%;
-  text-align: justify;
+  text-align: left;
   margin-top: 3rem;
 }
 
@@ -381,7 +381,7 @@ body {
 .drawing-page-content {
   font-size: 1rem;
   line-height: 1.6;
-  text-align: justify;
+  text-align: left;
 }
 
 .book-page-img-container {
@@ -463,7 +463,7 @@ body {
 .kavithai-page-content {
   font-size: 1.125rem;
   line-height: 1.8;
-  text-align: justify;
+  text-align: left;
   margin-top: 3rem;
   white-space: pre-wrap;
 }
@@ -686,7 +686,7 @@ body {
 .naatkurippu-page-content {
   font-size: 18px;
   line-height: 180%;
-  text-align: justify;
+  text-align: left;
   margin-top: 3rem;
 }
 
@@ -777,7 +777,7 @@ body {
 .sirukadhai-page-content {
   font-size: 18px;
   line-height: 180%;
-  text-align: justify;
+  text-align: left;
   margin-top: 3rem;
 }
 
